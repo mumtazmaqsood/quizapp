@@ -14,6 +14,7 @@ export const getQuizDetails = async (totalQuestion: number, level: string): Prom
         return {
             question: questionObj.question,
             answer: questionObj.correct_answer,
+            correct_answer: questionObj.correct_answer,
             option: shuffleArray(questionObj.incorrect_answers.concat(questionObj.correct_answer))
         }
     })

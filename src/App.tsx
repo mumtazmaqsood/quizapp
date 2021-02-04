@@ -11,6 +11,9 @@ function App() {
 
   let [currentStep, setCurrentStep] = useState(0)
 
+  let [score, setScore] = useState(0);
+  
+
 
   useEffect(() => {
     async function fetchData() {
@@ -21,13 +24,22 @@ function App() {
     fetchData();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent<EventTarget>) => {
+  const handleSubmit = (e: React.FormEvent<EventTarget>, userAns:string) => {
     e.preventDefault()
+    
+    /*  data of one question */
+    const currentQuestion:QuestionType = quiz[currentStep];
+    console.log(`correct answer:${currentQuestion.correct_answer}: user selection:${userAns}`)
+    if(userAns === currentQuestion.correct_answer){
+      setScore(++score)
+    }
+    
     if (currentStep !== quiz.length-1) {
       setCurrentStep(++currentStep)
+      
     }
     else {
-      alert("Quiz Ended");
+      alert(`Your final score:${score} out of : ${quiz.length}`);
       setCurrentStep(0);
     }
 
