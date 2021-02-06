@@ -15,10 +15,14 @@ export type QuestionType = {
     answer: string
     option: string[]
     correct_answer: string
+    
 }
 
 export type QuestionPropType = {
     question: string
     option: string[]
+    totalQuestion: number
+    steps: number
     callback: (e: React.FormEvent<EventTarget>, ans:string) => void
+    correctAnswer: string
 }
