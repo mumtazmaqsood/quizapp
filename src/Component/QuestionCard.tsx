@@ -15,9 +15,7 @@ export const QuestionCard: React.FC<QuestionPropType> = ({ question, option, cal
         /* setShowQuestion(false); */
     }
 
-    /* const test = () => {
-        alert("test");
-    } */
+    
     
     return (
         <div>
@@ -58,47 +56,7 @@ export const QuestionCard: React.FC<QuestionPropType> = ({ question, option, cal
                 </form>
             </div>
 
-            {/* <div>
-                {showResult ?
-                    <div className="question-container">
-                        <h1>Question Card</h1>
-                        <span>{steps} / {totalQuestion}</span>
-
-
-                        <div className="question">
-                            {question}
-                        </div>
-
-
-                        <form onSubmit={(e: React.FormEvent<EventTarget>) =>
-                            callback(e, selectedAnswer)
-                        }>
-
-                            {
-                                option.map((opt: string, ind: number) => {
-                                    return (
-                                        <div key={ind} className={correctAnswer === opt ? "test1" : "test2"}>
-
-                                            <label >
-                                                <input
-                                                    type="radio"
-                                                    name="opt"
-                                                    required
-                                                    value={opt}
-                                                    checked={selectedAnswer === opt}
-                                                    onChange={handleSelectionNext}
-                                                />
-                                                {opt}
-                                            </label>
-                                        </div>
-                                    )
-                                })
-                            }
-
-                            <input type="submit" />
-                        </form>
-                    </div> : null} */}
-                
+                            
             </div >
         
     )
