@@ -17,7 +17,7 @@ function App() {
   let [showComponent, setShowComponent] = useState(false);
 
   /* const currentQuestion: QuestionType = quiz[currentStep]; */
-  let [getCorrectAnswer, setCorrectAnswer] = useState<any>("")
+  let [getCorrectAnswer] = useState<any>("")
   /* let answers:string[] = [] */
   
 
