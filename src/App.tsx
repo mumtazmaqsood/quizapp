@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { QuestionCard } from './Component/QuestionCard';
 import { getQuizDetails } from './serivces/quiz_services';
-import { Quiz, QuestionType } from './Types/quiz_types';
+import { QuestionType } from './Types/quiz_types';
 import './App.css';
-import { QueryByText } from '@testing-library/react';
+/* import { QueryByText } from '@testing-library/react'; */
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
   /* const currentQuestion: QuestionType = quiz[currentStep]; */
   let [getCorrectAnswer, setCorrectAnswer] = useState<any>("")
-  let answers:string[] = []
+  /* let answers:string[] = [] */
   
 
   useEffect(() => {
@@ -42,6 +42,7 @@ function App() {
 
     if (userAns === currentQuestion.correct_answer) {
       setScore(++score)
+      
     }
 
 /*     if (userAns !== currentQuestion.correct_answer) {

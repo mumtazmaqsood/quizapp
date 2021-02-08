@@ -5,7 +5,7 @@ export const QuestionCard: React.FC<QuestionPropType> = ({ question, option, cal
 
     let [selectedAnswer, setSelectedAnswer] = useState("");
     /* let [corAnswer, setCorAnswer] = useState(""); */
-    let [showQuestion, setShowQuestion] = useState(true);
+    /* let [showQuestion, setShowQuestion] = useState(true); */
     let [showResult, setShowResult] = useState(false);
 
 
@@ -15,9 +15,9 @@ export const QuestionCard: React.FC<QuestionPropType> = ({ question, option, cal
         /* setShowQuestion(false); */
     }
 
-    const test = () => {
+    /* const test = () => {
         alert("test");
-    }
+    } */
     
     return (
         <div>
